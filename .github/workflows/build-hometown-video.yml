@@ -17,23 +17,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install video tools and Chinese fonts
+      - name: Install Python image tool
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg fonts-noto-cjk
+          python3 -m pip install pillow
 
-      - name: Install voice tool
+      - name: Build video
         run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install edge-tts
-
-      - name: Build MP4 video
-        run: |
-          python3 scripts/build_hometown_video.py
+          python3 scripts/build_hometown_video_avi.py
 
       - name: Upload final video
         uses: actions/upload-artifact@v4
         with:
           name: hometown-final-video
-          path: output/2026-07-09_老家水田_最终成片.mp4
-
+          path: output/2026-07-09_老家水田_最终成片.avi
