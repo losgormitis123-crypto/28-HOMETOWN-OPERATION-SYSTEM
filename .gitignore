@@ -1,0 +1,10 @@
+.DS_Store
+output/
+*.tmp
+__pycache__/
+*.pyc
+*.avi
+*.aiff
+*.mp4
+*.mov
+*.m4v

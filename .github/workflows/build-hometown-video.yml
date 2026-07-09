@@ -1,0 +1,39 @@
+name: build-hometown-video
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "00_INPUT/family_materials/photos/**"
+      - "05_CONTENT_OUTPUT/video_scripts/**"
+      - "scripts/build_hometown_video.py"
+      - ".github/workflows/build-hometown-video.yml"
+
+jobs:
+  build-video:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install video tools and Chinese fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-noto-cjk
+
+      - name: Install voice tool
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install edge-tts
+
+      - name: Build MP4 video
+        run: |
+          python3 scripts/build_hometown_video.py
+
+      - name: Upload final video
+        uses: actions/upload-artifact@v4
+        with:
+          name: hometown-final-video
+          path: output/2026-07-09_老家水田_最终成片.mp4
+
