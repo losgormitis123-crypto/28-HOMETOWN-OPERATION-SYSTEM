@@ -5,6 +5,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
+# This script is executed by GitHub Actions to build the final vertical MP4.
 IMAGE = ROOT / "00_INPUT/family_materials/photos/2026-07-09_湖北老家_水田_清晨田边_自己.jpg"
 SRT = ROOT / "05_CONTENT_OUTPUT/video_scripts/2026-07-09_老家水田_视频成片/2026-07-09_老家水田_字幕.srt"
 TEXT = ROOT / "05_CONTENT_OUTPUT/video_scripts/2026-07-09_老家水田_视频成片/2026-07-09_老家水田_口播纯文本.txt"
@@ -103,4 +104,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
