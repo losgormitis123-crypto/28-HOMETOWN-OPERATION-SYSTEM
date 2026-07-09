@@ -9,10 +9,10 @@
 - 已配置 GitHub Actions 自动生成 MP4 视频
 - 已避免上传超过 GitHub 限制的大视频文件
 
-## 推荐仓库名
+## 实际仓库名
 
 ```text
-AI-HOMETOWN-OPERATION-SYSTEM
+28-HOMETOWN-OPERATION-SYSTEM
 ```
 
 ## 手动创建步骤
@@ -27,7 +27,7 @@ https://github.com/new
 3. Repository name 填：
 
 ```text
-AI-HOMETOWN-OPERATION-SYSTEM
+28-HOMETOWN-OPERATION-SYSTEM
 ```
 
 4. Description 可以填：
@@ -47,13 +47,13 @@ AI返乡计划自运营系统：用AI记录湖北老家生活，并自动生成�
 创建完成后，把仓库地址发给 Codex，例如：
 
 ```text
-https://github.com/你的用户名/AI-HOMETOWN-OPERATION-SYSTEM
+https://github.com/你的用户名/28-HOMETOWN-OPERATION-SYSTEM
 ```
 
 或者：
 
 ```text
-你的用户名/AI-HOMETOWN-OPERATION-SYSTEM
+你的用户名/28-HOMETOWN-OPERATION-SYSTEM
 ```
 
 Codex 下一步会继续帮你：
@@ -63,4 +63,3 @@ Codex 下一步会继续帮你：
 3. 触发 GitHub Actions。
 4. 等待生成 MP4 视频。
 5. 指导你下载最终成片。
-
